@@ -10,8 +10,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-family: 'Roboto Slab', serif;
-  line-height: 1.3;
+  font: normal 100%/1.3 "Roboto Slab", serif;
 }
 
 *, *::before, *::after {
@@ -24,9 +23,31 @@ body {
 
 figure {
   margin: 0;
+  position: relative;
 }
 
-img {
+.img-flex {
   display: block;
   width: 100%;
+}
+
+figcaption {
+  max-width: 15em;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  border-color: rgba(124, 65, 99, .8);
+  border-radius: 5px;
+  position: absolute;
+  bottom: .5rem;
+  left: .5rem;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 25em) {
+
+  .img-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 }
